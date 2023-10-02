@@ -42,6 +42,7 @@
             </div>
           </div>
         </div>
+
         <!-- Rectangle card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure><img src="images/rectangle.png" alt="rectangle" /></figure>
@@ -65,6 +66,7 @@
             </div>
           </div>
         </div>
+
         <!-- Parallelogram card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure><img src="images/parallelogram.png" alt="rectangle" /></figure>
@@ -88,6 +90,31 @@
             </div>
           </div>
         </div>
+
+        <!-- Ellipse card -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure><img src="images/ellipse.png" alt="rectangle" /></figure>
+          <div class="card-body space-y-4">
+            <h2 class="card-title">Ellipse</h2>
+            <p>Area (A) = π ab</p>
+            <p>
+              <!-- Ellipse-base -->
+              <input id="ellipse-first-redues" class="w-24 px-2 border bg-gray-200 text-xl" placeholder="large" type="number">
+              <span class="ml-3 text-xl">cm</span>
+              <!-- ellipse-hight -->
+              <input id="ellipse-secound-redues" class="w-24 px-2 ml-4 border bg-gray-200 text-xl" placeholder="short" type="number">
+              <span class="ml-3 text-xl">cm</span>
+            </p>
+            <p class="text-2xl">
+              Area :  <span id="ellipse-area">0</span>
+              cm<sup>2</sup>
+            </p>
+            <div class="card-actions">
+              <button id="btn-ratangle" onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+
         <!-- 2nd card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure><img src="images/rectangle.png" alt="rectangle" /></figure>

@@ -85,3 +85,11 @@ function setElementInnerText(elementId, area) {
     const element = document.getElementById(elementId);
     element.innerText = area;
 }
+
+// Ellipse Area
+function calculateEllipseArea() {
+    const firstRadius = getInputValue('ellipse-first-redues');
+    const secoundRadius = getInputValue('ellipse-secound-redues');
+    const area = 3.1416 * firstRadius * secoundRadius;
+    setElementInnerText('ellipse-area', area);
+};
