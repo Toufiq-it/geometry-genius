@@ -25,7 +25,6 @@ function calculateRatangleArea() {
     const widthFiled = document.getElementById('rectangle-width');
     const widthValueText = widthFiled.value;
     const width = parseFloat(widthValueText);
-    console.log(width);
 
     // get rectangle length
     const lengthFiled = document.getElementById('rectangle-length');
@@ -37,9 +36,7 @@ function calculateRatangleArea() {
     // set ratangle area
     const rectangleArea = document.getElementById('rectangle-area');
     rectangleArea.innerText = area;
-
-}
-// 
+};
 
 /* // use event handler or function
 function calculateRatangleArea(widthId) {
@@ -59,3 +56,32 @@ document.getElementById('btn-ratangle').addEventListener('click',function(){
     const rectangleArea = document.getElementById('rectangle-area');
     rectangleArea.innerText = area;
 }); */
+
+
+
+// Reusable function --> reduce duplicate code
+// Parallelogram Area
+function calculateParallelogramArea() {
+    // get the parallelogram-base value
+    const base = getInputValue('parallelogram-base');
+    // get the parallelogram-hight value
+    const hight = getInputValue('parallelogram-hight');
+    // calculate parallelogram area
+    const area = base * hight;
+    // set the value
+    setElementInnerText('parallelogram-area', area);
+}
+
+// resuable input value
+function getInputValue(filedId) {
+    const inputFiled = document.getElementById(filedId);
+    const inputValueText = inputFiled.value;
+    const inputvalue = parseFloat(inputValueText);
+    return inputvalue;
+}
+
+// resuable set value span, p, div, etc text
+function setElementInnerText(elementId, area) {
+    const element = document.getElementById(elementId);
+    element.innerText = area;
+}
